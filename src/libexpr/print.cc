@@ -475,7 +475,7 @@ private:
             else
                 output << "primop";
         } else {
-            abort();
+            NIX_UNREACHABLE();
         }
 
         output << "»";
@@ -504,7 +504,7 @@ private:
             if (options.ansiColors)
                     output << ANSI_NORMAL;
         } else {
-            abort();
+            NIX_UNREACHABLE();
         }
     }
 

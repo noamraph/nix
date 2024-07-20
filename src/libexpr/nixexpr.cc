@@ -25,7 +25,7 @@ std::ostream & operator <<(std::ostream & str, const SymbolStr & symbol)
 
 void Expr::show(const SymbolTable & symbols, std::ostream & str) const
 {
-    abort();
+    NIX_UNREACHABLE();
 }
 
 void ExprInt::show(const SymbolTable & symbols, std::ostream & str) const
@@ -269,7 +269,7 @@ std::string showAttrPath(const SymbolTable & symbols, const AttrPath & attrPath)
 
 void Expr::bindVars(EvalState & es, const std::shared_ptr<const StaticEnv> & env)
 {
-    abort();
+    NIX_UNREACHABLE();
 }
 
 void ExprInt::bindVars(EvalState & es, const std::shared_ptr<const StaticEnv> & env)

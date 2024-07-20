@@ -400,12 +400,12 @@ public:
 
     virtual void handleChildOutput(Descriptor fd, std::string_view data)
     {
-        abort();
+        NIX_UNREACHABLE();
     }
 
     virtual void handleEOF(Descriptor fd)
     {
-        abort();
+        NIX_UNREACHABLE();
     }
 
     void trace(std::string_view s);
