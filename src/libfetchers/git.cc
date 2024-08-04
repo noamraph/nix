@@ -59,7 +59,7 @@ bool touchCacheFile(const Path & path, time_t touch_time)
 Path getCachePath(std::string_view key, bool shallow)
 {
     return getCacheDir()
-    + "/nix/gitv3/"
+    + "/gitv3/"
     + hashString(HashAlgorithm::SHA256, key).to_string(HashFormat::Nix32, false)
     + (shallow ? "-shallow" : "");
 }
