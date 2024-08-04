@@ -106,7 +106,7 @@ static GlobalConfig::Register rEvalSettings(&evalSettings);
 Path getNixDefExpr()
 {
     return settings.useXDGBaseDirectories
-        ? getStateDir() + "/nix/defexpr"
+        ? getStateDir() + "/defexpr"
         : getHome() + "/.nix-defexpr";
 }
 
