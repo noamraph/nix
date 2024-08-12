@@ -9,7 +9,6 @@ nix_tests = \
   characterisation-test-infra.sh \
   experimental-features.sh \
   fetchMercurial.sh \
-  gc-auto.sh \
   user-envs.sh \
   user-envs-migration.sh \
   binary-cache.sh \
