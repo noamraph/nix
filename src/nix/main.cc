@@ -552,3 +552,4 @@ int main(int argc, char * * argv)
         nix::mainWrapped(argc, argv);
     });
 }
+
