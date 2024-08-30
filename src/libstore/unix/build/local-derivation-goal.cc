@@ -771,6 +771,9 @@ void LocalDerivationGoal::startBuilder()
                 pathsInChroot.erase(worker.store.printStorePath(*i.second.second));
         }
 
+        // Create the dev directory before making the root read-only
+        createDirs(chrootRootDir + "/dev");
+        
         // Make build root read-only, so `mkdir /homeless-shelter` would fail.
         chmod_(chrootRootDir, 01555);
 
