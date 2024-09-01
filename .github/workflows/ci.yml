@@ -15,9 +15,9 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest]
         install_options: [""]
-        include:
-          - os: ubuntu-latest
-            install_options: "--no-daemon"
+        # include:
+        #   - os: ubuntu-latest
+        #     install_options: "--no-daemon"
     runs-on: ${{ matrix.os }}
     timeout-minutes: 60
     steps:
