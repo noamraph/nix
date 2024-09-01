@@ -1970,6 +1970,9 @@ void LocalDerivationGoal::runChild()
             if (rmdir("real-root") == -1)
                 throw SysError("cannot remove real-root directory");
 
+            /* Make root unwritable */
+            chmod_("/", 0555);
+            
             /* Switch to the sandbox uid/gid in the user namespace,
                which corresponds to the build user or calling user in
                the parent namespace. */
